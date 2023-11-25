@@ -23,3 +23,5 @@ function saludar2(nom)
     console.log("estyoy dentro de una funcion")
 })();
 
+//Inmediately invoked Function Expression - IIFE
+
