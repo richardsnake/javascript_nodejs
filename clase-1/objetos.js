@@ -1,17 +1,17 @@
-let persona = {
-    'nombre': "Richard",
-    'apellido': "Abanto",
-    'edad': 36,
-    'sexo': 'M',
-    'masculito' : true,
-    'femenino' :false,
+let richard = {
+    nombre: "Richard",
+    apellido: "Abanto",
+    edad: 36,
+    sexo: 'M',
+    masculito : true,
+    femenino :false,
     nombreCompleto : function(){
         return this.nombre + " "+this.apellido;
     }
     
 };
 
-console.log(persona.nombreCompleto());
+console.log(richard.nombreCompleto());
 
 class Persona{
     nombre;
@@ -31,9 +31,15 @@ class Persona{
     }
 }
 
-for(propiedad in persona){
-    console.log(persona[propiedad]);
+for(propiedad in richard){
+    console.log(richard[propiedad]);
 }
 
 let p1 = new Persona("Heberth", "Deza", "Guadalue", "27/09/1988");
 console.log(p1);
+
+console.log(p1.nombre);
+console.log(p1["nombre"]);
+
+console.log(richard.nombre);
+console.log(richard["nombre"]);

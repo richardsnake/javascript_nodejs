@@ -1,8 +1,8 @@
 //console.log("Hola mundo desde un archivo js");
 
 var nombre = 'Richard'
-
-function saludar(){
+console.log(nombre);
+ function saludar(){
     let nombre = "Heberth";
     let apellido = "Deza";
     console.log("Hola "+nombre + " "+apellido );
@@ -26,3 +26,6 @@ console.log(BigInt(Number.MAX_SAFE_INTEGER) + 1n);
 console.log(BigInt(Number.MAX_SAFE_INTEGER) + 2n);
 var a = Symbol("hola");
 console.log(a);
+
+var nombre = 17
+console.log(nombre);
