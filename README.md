@@ -10,5 +10,5 @@ repo para las clases de javascript
 # Subir cambios de forma rapida
 
 - Ejecutar el scirpt bash
-
+''' # chmod a+x subir-git.sh
 ''' # ./subir-git.sh
