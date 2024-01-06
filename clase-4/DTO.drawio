@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2023-12-17T22:58:00.615Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="j44DxbALxgiBMivogK_E" version="22.1.11" type="device">
+  <diagram name="Página-1" id="6fmCoMgqBSTGmc25Aa17">
+    <mxGraphModel dx="2261" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wZlB502gQz_IXa7_9xUW-1" value="USER" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="160" height="198" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-2" value="ID NUMBER&lt;br&gt;NAME VARCHAR&lt;br&gt;LASTNAME VARCHAR&lt;br&gt;EMAIL VARCHAR&lt;br&gt;DECHA DATETIME&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="wZlB502gQz_IXa7_9xUW-1">
+          <mxGeometry y="26" width="160" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="wZlB502gQz_IXa7_9xUW-1">
+          <mxGeometry y="120" width="160" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wZlB502gQz_IXa7_9xUW-6" target="wZlB502gQz_IXa7_9xUW-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-6" value="&lt;div style=&quot;background-color: rgb(255, 255, 254); line-height: 18px;&quot;&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;    &quot;id&quot;: &lt;span style=&quot;color: #098658;&quot;&gt;1243&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;name&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;Richard&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;lastname&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;Abanto&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;email&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;abanto4@gmail.com&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;date&quot;: &quot;04/11/1987&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="204" y="160" width="210" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-8" value="Modelo de Datos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="140" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-9" value="Request/DTO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="130" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wZlB502gQz_IXa7_9xUW-10" target="wZlB502gQz_IXa7_9xUW-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wZlB502gQz_IXa7_9xUW-10" target="wZlB502gQz_IXa7_9xUW-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-10" value="&lt;div style=&quot;background-color: rgb(255, 255, 254); line-height: 18px;&quot;&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;    &quot;id&quot;: &lt;span style=&quot;color: #098658;&quot;&gt;1243&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;nombre&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;Richard&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;apellido&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;Abanto&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;email&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;abanto4@gmail.com&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;fecha&quot;: &quot;04/11/1987&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;direccion&quot;: &quot;&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;pais&quot;: &quot;&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="250" width="210" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-11" value="PERSONA" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="450" width="160" height="168" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-12" value="ID NUMBER&lt;br&gt;NAME VARCHAR&lt;br&gt;LASTNAME VARCHAR&lt;br&gt;EMAIL VARCHAR&lt;br&gt;DECHA DATETIME&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="wZlB502gQz_IXa7_9xUW-11">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="wZlB502gQz_IXa7_9xUW-11">
+          <mxGeometry y="90" width="160" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-14" value="Model User" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wZlB502gQz_IXa7_9xUW-16" target="wZlB502gQz_IXa7_9xUW-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-16" value="&lt;div style=&quot;background-color: rgb(255, 255, 254); line-height: 18px;&quot;&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;    &quot;id&quot;: &lt;span style=&quot;color: #098658;&quot;&gt;1243&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;name&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;Richard&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;lastname&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;Abanto&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #a31515;&quot;&gt;&quot;email&quot;&lt;/span&gt;: &lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;abanto4@gmail.com&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&quot;date&quot;: &quot;04/11/1987&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #0451a5;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="204" y="430" width="210" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="wZlB502gQz_IXa7_9xUW-18" value="Model Persona" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="398" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
