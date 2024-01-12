@@ -32,7 +32,7 @@ import { User } from './user/entities/User.entity';
     MongooseModule.forRoot('mongodb://localhost/redes'),
     MongooseModule.forFeature([{name: 'Likes', schema: LikesSchema}]),
     PetsModule, OrdersModule, PersonaModule, AnimalsModule, UserModule],
-  controllers: [AppController, UserController, PetsController],
-  providers: [AppService, UserService, PetsService],
+  controllers: [AppController, PetsController],
+  providers: [AppService, PetsService],
 })
 export class AppModule {}

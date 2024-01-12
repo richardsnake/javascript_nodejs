@@ -1,17 +1,21 @@
 import { Injectable } from '@nestjs/common';
 import { UserDTO } from "./DTO/User.dto";
-import { InjectRepository } from '@nestjs/typeorm';
 import { User } from "./entities/User.entity";
+import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 @Injectable()
 export class UserService {
-
+    constructor(
+        @InjectRepository(User)
+        private readonly userRepository: Repository<User>,
+    ){}
+/*
     constructor(
         @InjectRepository(User)
         private readonly userRepoitory: Repository<User>,
     ){}
-    
+*/    
     users: User[] = [];
 
     getAllUsers(): UserDTO[] {
@@ -20,7 +24,8 @@ export class UserService {
 
     getSpecificUser(id: number): Promise<User>{
         
-        return this.userRepoitory.findOneById(id);
+        //return this.userRepoitory.findOneById(id);
+        return null;
     }
 
     createUser(req: UserDTO): UserDTO{

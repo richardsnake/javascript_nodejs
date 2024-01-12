@@ -21,13 +21,13 @@ export class OrdersService {
     return this.orderRepository.find();
   }
 
-  findOne(id: number) {
+  findOne(id: number) : Promise<Order> {
     return this.orderRepository.findOneById(id);
   }
 
-  update(id: number, updateOrderDto: UpdateOrderDto) {
+  update(id: number, updateOrderDto: UpdateOrderDto): string {
     this.orderRepository.update(id, updateOrderDto)
-    return `This action updates a #${id} order`;
+    return `This action updates a #${id} order`; 
   }
 
   remove(id: number) {
