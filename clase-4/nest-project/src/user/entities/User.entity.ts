@@ -1,4 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import * as bcrypt from "bcrypt";
 
 @Entity("USER")
 export class User{
@@ -10,4 +11,8 @@ export class User{
     password: string;   
     @Column({type: 'varchar'})
     profile: string;   
+
+    async validatePassword(password: string): Promise<boolean>{
+        return bcrypt.compare(password, this.password)
+    } 
 }

@@ -8,7 +8,7 @@ export class UserController {
 
 
     @Get()
-    getUser():UserDTO[]{
+    getUser():Promise<User[]>{
         return this.userService.getAllUsers();
     }
 
@@ -19,18 +19,18 @@ export class UserController {
     }
 
     @Post()
-    postUser(@Body() user): {}{
+    postUser(@Body() user): Promise<User>{
         return this.userService.createUser(user);
     }
 
-    @Patch()
-    patchUser(@Body() user): UserDTO {
-        return this.userService.updateUser(user);
+    @Patch(":id")
+    patchUser(@Param("id") id, @Body() user: UserDTO): UserDTO {
+        return this.userService.updateUser(id, user);
 
     }
 
     @Delete(":id")
-    deleteUser(@Param("id") id): UserDTO{
+    deleteUser(@Param("id") id): string{
         return  this.userService.deleteUser(Number(id))
     }
 
