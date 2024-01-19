@@ -3,11 +3,17 @@
     "version": "1.0.0",
     "type": "module",
     "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
     "dependencies": {
         "@nestjs/mapped-types": "*",
         "@nestjs/mongoose": "^10.0.2",
         "@nestjs/swagger": "^7.1.17",
         "class-validator": "^0.14.0",
         "mongoose": "^8.0.3"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
     }
 }

@@ -2,13 +2,13 @@ import { Controller, Get, Post, Body, Param, Delete, Patch } from '@nestjs/commo
 import { UserService } from "./user.service";
 import { UserDTO } from "./DTO/User.dto";
 import { User } from "./entities/User.entity";
-@Controller('user')
+@Controller('users')
 export class UserController {
     constructor(private readonly userService: UserService) {}
 
 
     @Get()
-    getUser():UserDTO[]{
+    getUser():Promise<User[]>{
         return this.userService.getAllUsers();
     }
 
@@ -23,14 +23,14 @@ export class UserController {
         return this.userService.createUser(user);
     }
 
-    @Patch()
-    patchUser(@Body() user): UserDTO {
-        return this.userService.updateUser(user);
+    @Patch(":id")
+    patchUser(@Param("id") id:string, @Body() user: UserDTO): UserDTO {
+        return this.userService.updateUser(+id, user);
 
     }
 
     @Delete(":id")
-    deleteUser(@Param("id") id): UserDTO{
+    deleteUser(@Param("id") id): string{
         return  this.userService.deleteUser(Number(id))
     }
 

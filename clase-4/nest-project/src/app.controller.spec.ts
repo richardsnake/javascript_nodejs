@@ -16,7 +16,11 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+      expect(appController.getHello()).toBe('Hola mundo desde NestJS!');
+    });
+
+    it('debe devolver devolviendo respuesta de metodo post', ()=>{
+      expect(appController.postPrincipal({say: "hello"})).toBe('devolviendo respuesta de metodo post');
     });
   });
 });

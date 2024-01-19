@@ -1,5 +1,8 @@
 function seno(angulo){
-    return 1;
+    if(angulo == 0)
+        return 1;
+    else
+        return 2;
 }
 
 function coseno(angulo)
@@ -16,5 +19,4 @@ class Punto {
     x;
     y;
 };
-export {seno, coseno, tangente as tan, Punto as Point}
-
+module.exports =  {seno, coseno, tangente, Punto}

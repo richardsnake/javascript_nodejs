@@ -1,8 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 import { UserDTO } from "./DTO/User.dto";
 import { User } from "./entities/User.entity";
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, QueryFailedError } from 'typeorm';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UserService {
@@ -10,58 +11,49 @@ export class UserService {
         @InjectRepository(User)
         private readonly userRepository: Repository<User>,
     ){}
-/*
-    constructor(
-        @InjectRepository(User)
-        private readonly userRepoitory: Repository<User>,
-    ){}
-*/    
-    users: User[] = [];
+   
+    //users: User[] = [];
 
-    getAllUsers(): UserDTO[] {
-        return this.users;
+    getAllUsers(): Promise<User[]> {
+        return this.userRepository.find();
     }
 
     getSpecificUser(id: number): Promise<User>{
         
-        //return this.userRepoitory.findOneById(id);
-        return null;
+        return this.userRepository.findOneById(id);
     }
 
-    createUser(req: UserDTO): UserDTO{
+    async createUser(req: UserDTO): Promise<User>{
         console.log(req);
-        req.id = this.users.length + 1
-        this.users.push(req);
+        try {
+            const salt = await bcrypt.genSalt();
+            console.log(salt);
+            let passwdCipher = await bcrypt.hash(req.password, salt);
+            req.password = passwdCipher; 
+            console.log(req.password);
+            return this.userRepository.save(req);
+        }
+        catch(e){
+            console.log("entro al catch")
+            throw new BadRequestException("El usuario ua se encuentra registrado");
+            
+        }
+    
+    }
+
+    updateUser(id: number, req: UserDTO): UserDTO{
+        console.log(req.id)
+        this.userRepository.update(id, req);
         return req;
     }
 
-    updateUser(req: UserDTO): UserDTO{
-        console.log(req.id)
-        let id = req.id;
-        let user = this.users.find((obj)=> {
-            return obj.id === id;
-        });
-        let index = this.users.indexOf(user);
-        /*user.name = req.name;
-        user.lastname = req.lastname;
-        user.age = req.age;
-        user.email = req.email;
-        user.profile = req.profile;
-        this.users[index] = user;*/
-        return user;
+    deleteUser(id:number):string{
+        this.userRepository.delete(id);
+        return "eliminando usuario con id: "+id;
     }
 
-    deleteUser(id:number):UserDTO{
-        let user = this.users.find((obj)=> {
-            return obj.id === id;
-        });
-        console.log(user);
-        let index = this.users.indexOf(user);
-        if(index != -1){
-            this.users.splice(index, 1);
-        }
-        //return "eliminando usuario con id: "+id;
-        return user;
+    async findUserByName(username: string): Promise<User>{
+        return this.userRepository.findOne({where: {username}});
     }
 
 }
