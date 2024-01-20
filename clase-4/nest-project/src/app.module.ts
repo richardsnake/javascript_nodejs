@@ -11,7 +11,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { OrdersModule } from './orders/orders.module';
 import { Order } from './orders/entities/order.entity';
 import { PersonaModule } from './persona/persona.module';
-import { Persona } from './persona/entities/Persona.entity';
+import { Persona } from './persona/entities/persona.entity';
 import { MongooseModule } from "@nestjs/mongoose";
 import { AnimalsModule } from './animals/animals.module';
 import { LikesSchema } from './animals/entities/likes.schema';
@@ -21,7 +21,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'host.docker.internal',
       port: 5432,
       username: 'homestead',
       password: '1q2w3e',
@@ -30,7 +30,7 @@ import { AuthModule } from './auth/auth.module';
       synchronize:  true,
       logging: true
     }),
-    MongooseModule.forRoot('mongodb://localhost/redes'),
+    MongooseModule.forRoot('mongodb://host.docker.internal/redes'),
     MongooseModule.forFeature([{name: 'Likes', schema: LikesSchema}]),
     PetsModule, OrdersModule, PersonaModule, AnimalsModule, UserModule, AuthModule],
   controllers: [AppController, PetsController],
