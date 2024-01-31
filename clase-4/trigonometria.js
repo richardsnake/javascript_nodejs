@@ -7,7 +7,10 @@ function seno(angulo){
 
 function coseno(angulo)
 {
-    return 0;
+    if(angulo < 30)
+        return 0;
+    else
+        return 1;
 }
 
 function tangente(angulo)

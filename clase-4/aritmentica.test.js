@@ -14,3 +14,7 @@ test('calcular el seno de 0 y debe darme 1', ()=>{
 test('calcular el seno de otro angulo y debe darme 2', ()=>{
     expect(ari.seno(10)).toBe(2);
 });
+
+test('calcular el seno de otro angulo y debe darme 1', ()=>{
+    expect(ari.coseno(90)).toBe(1);
+});

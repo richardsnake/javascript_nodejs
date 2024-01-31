@@ -27,6 +27,4 @@ export class AuthController {
     getUserProfile(@Body() req: {}){
         return req;
     }
-
-
 }
